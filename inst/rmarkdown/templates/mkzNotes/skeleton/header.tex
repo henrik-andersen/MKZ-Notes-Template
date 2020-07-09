@@ -1,0 +1,60 @@
+% Title:......... Notes on Applied Methods in the Behavioural and Social Sciences 
+% Description:... Header file for further layout specifications
+% Author:........ Henrik Andersen
+% Date:.......... 09.07.2020
+
+% --- 
+% The following code could be used to insert a full-sized pdf image of the cover 
+% However, this might not be the ideal way, maybe it would be better to use the 
+% default title environment and insert an image in the background, or maybe between 
+% the text and logos, see https://www.tu-chemnitz.de/ub/univerlag/ for examples
+% of other Schriftenreihen cover pages. 
+% --- 
+
+% Package to include pdf of title page before the first pages 
+% \usepackage{pdfpages}
+
+% Package to be able to include title page in the form of an image
+% \usepackage{titling}
+
+% Insert the full pdf of the cover before first pages 
+% \pretitle{%
+%   \begin{center}
+%   \LARGE
+%   \includepdf{placeholder_titlepage.pdf}
+% }
+% \posttitle{\end{center}}
+
+\pagenumbering{gobble}
+
+% Packages for Roboto font, must be combined with: latex_engine: pdflatex 
+\usepackage[sfdefault]{roboto}
+\usepackage[T1]{fontenc}
+
+% Other packages 
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% \fancyhead[CO,CE]{Notes on Applied Methods}
+
+% Special math operators 
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\mathrm{Var}}
+\DeclareMathOperator{\Cov}{\mathrm{Cov}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% Graphics 
+% \graphicspath{{./images/}}
+
+% Equation labels
+
+%\mathtoolsset{showonlyrefs}
