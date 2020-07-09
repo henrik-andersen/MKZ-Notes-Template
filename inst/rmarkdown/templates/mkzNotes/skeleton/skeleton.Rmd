@@ -25,8 +25,7 @@ papersize: a4
 urlcolor: blue
 linkcolor: red
 citecolor: red
-# Add the location of your .bib file with references below 
-# bibliography: 
+# Add the location of your .bib file with references 
 ---
 
 ```{r global options, include=FALSE}
