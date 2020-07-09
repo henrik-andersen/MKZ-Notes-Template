@@ -1,11 +1,10 @@
 Package: mkztemplate
 Type: Package
-Title: What the Package Does (Title Case)
+Title: MKZ-Notes-Template
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Henrik Kenneth Andersen
+Maintainer: Henrik Kenneth Andersen <henrik.andersen@soziologie.tu-chemnitz.de>
+Description: Generates a skeleton R Markdown file for creating MKZ "Notes" articles.
+License: --
 Encoding: UTF-8
 LazyData: true
