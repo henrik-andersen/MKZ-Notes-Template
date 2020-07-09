@@ -1,18 +1,160 @@
 ---
-title: "Template Title"
-author: "Your Name"
-date: "The Date"
-output: output_format
+title: |
+  | \vspace{12pt} \textbf{Notes on Applied Methods in the Behavioural and Social Sciences}
+subtitle: |
+  | \vspace{12pt} [Subtitle]
+  | \vspace{12pt} [Issue]
+author: |
+  | [Author]
+date: "`r format(Sys.time(), '%Y')`"
+output:
+  pdf_document:
+    keep_tex: true
+    latex_engine: pdflatex
+    fig_caption: yes
+    number_sections: yes
+    includes:
+      in_header: header.tex
+  word_document: default
+  html_document: default
+geometry: margin=1in
+mainfont: roboto
+fontsize: 12pt
+documentclass: article
+papersize: a4
+urlcolor: blue
+linkcolor: red
+citecolor: red
+# Add the location of your .bib file with references below 
+# bibliography: 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r global options, include=FALSE}
+# The following chunk options are set as the default
+# They can be turned off but deleting them in this chunk, 
+# or by overriding the default in each individual chunk below 
+knitr::opts_chunk$set( echo = FALSE)
 ```
 
-## Adding an RMarkdown Template
+\vspace{96pt}
 
-This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires.
+\begin{center}
+\includegraphics[width=.4\textwidth]{TU_Chemnitz_Logo_schwarz.jpg}
+\end{center}
 
-This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
+\begin{center}
+\textbf{University Press Chemnitz}
+\end{center}
 
-Finally, be sure to remove this message!
+\newpage
+
+\textbf{Bibliographic Information published by} \vspace{-6pt}
+
+\textbf{Die Deutsche Nationalbibliothek}
+
+Die Deutsche Nationalbibliothek lists this publication in the Deutsche Nationalbibliografie; detailed bibliographic data is available online: \href{http://www.dnb.de/EN}{http://www.dnb.de/EN}.
+
+\vspace{12pt}
+
+\renewcommand\arraystretch{1.3}
+\noindent\begin{tabularx}{\textwidth}{@{}l X}
+Cover image:       & Manuel Holz \\
+Typsetting/Layout: & Henrik Kenneth Andersen 
+\end{tabularx}
+
+\renewcommand\arraystretch{1.3}
+\noindent\begin{tabularx}{\textwidth}{@{}l X}
+Editors: & Prof. Dr. Jochen Mayerl (Sociology with a Focus on Empirical Social Research) \\
+ & Prof. Dr. Peter Kriwy (Sociology with a Focus on Health Research) \\
+ & Prof. Dr. Christian Maiwald (Research Methodology and Data Analysis in Biomechanics) \\
+ & Prof. Dr. Peter Sedlmeier (Research Methods and Evaluation in Psychology)
+\end{tabularx}
+
+Chemnitz University of Technology \vspace{-6pt}
+
+Faculty of Behavioural and Social Sciences \vspace{-6pt}
+
+Competence Center for Research Methods / MethodenKompetenzZentrum (MKZ) 
+
+\vspace{12pt}
+
+Chemnitz University of Technology/University Library \vspace{-6pt}
+
+\textbf{University Press Chemnitz} \vspace{-6pt}
+
+09107 Chemnitz \vspace{-6pt}
+
+\href{https://www.tu-chemnitz.de/ub/univerlag/index.html.en}{https://www.tu-chemnitz.de/ub/univerlag/index.html.en}
+
+\vspace{12pt}
+
+ISSN 2699-514X (online) \vspace{-6pt}
+
+\href{https://nbn-resolving.de/urn:nbn:de:bsz:ch1-qucosa2-373773}{https://nbn-resolving.de/urn:nbn:de:bsz:ch1-qucosa2-373773}
+
+\vspace{12pt}
+
+Issue x: \vspace{-6pt}
+
+\href{https://nbn-resolving.de/urn:nbn:de:bsz:ch1-qucosa2-xxxxxx}{https://nbn-resolving.de/urn:nbn:de:bsz:ch1-qucosa2-xxxxxx}
+
+\newpage
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\newpage
+
+\pagenumbering{arabic}
+
+This template will help create unified articles for the Notes on Applied Methods... series. Delete everything after `\pagenumbering{arabic}` to begin with a fresh template (with formatted front page and front matter). The tips below are just some examples of the basic functions. 
+
+# Section
+
+Top-level sections are specified with `#`. 
+
+## Subsection  
+
+Second-level sections (subsections) with two `##`. 
+
+### Subsubsection
+
+Third-level sections (subsubsections) with three `###`.  
+
+# Markdown syntax 
+
+Paragraphs are separated with a blank line. 
+
+Write italicized text with single asterics *like this*. Write bold text with double asterics **like this**. 
+
+Bullet points work like this (blank line is necessary)
+
+- This is a bullet point
+- This is another bullet point
+  - Indented second level bullet point
+- Top level bullet point again 
+
+Lists work like this (blank line in necessary)
+
+1. List entry number one
+2. List entry number two 
+
+Write block quotes with `>`, like this 
+
+> This will be a block quote. 
+
+Simple tables can be entered like this 
+
+Column one | Column two
+---------- | ----------
+Cell 1,1   | Cell 1,2
+Cell 2,1   | Cell 2,2
+
+Include images with the following style of syntax `![caption for image](path/to/image.jpg){options}`. 
+
+If `fig_caption: yes` is included in the options above, the caption will be included. Here for example, the TUC logo again (which will typically be placed at the top of a new page, as per latex settings).
+
+![TU logo](TU_Chemnitz_Logo_gruen.jpg){width="25%"}
